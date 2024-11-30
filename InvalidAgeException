@@ -1,5 +1,3 @@
-package com.exceptiondemo;
-
 // Клас винятку, який успадковує Exception
 public class InvalidAgeException extends Exception {
     // Конструктор для передачі повідомлення винятку
