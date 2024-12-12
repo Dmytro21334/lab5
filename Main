@@ -2,28 +2,24 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Метод для перевірки віку, який може викинути виняток
     public static void checkAge(int age) throws InvalidAgeException {
         if (age < 0 || age > 120) {
             throw new InvalidAgeException("Invalid age: " + age + ". Age must be between 0 and 120.");
         }
-        System.out.println("Valid age: " + age);  // Виводимо вік, якщо він коректний
+        System.out.println("Valid age: " + age); 
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Запитуємо вік користувача
         System.out.print("Enter your age: ");
         int age = scanner.nextInt();  // Зчитуємо введений вік
 
         try {
             checkAge(age);  // Перевіряємо вік, викидаємо виняток, якщо вік некоректний
         } catch (InvalidAgeException e) {
-            // Обробляємо виняток
             System.out.println("Error: " + e.getMessage());
         } finally {
-            // Закриваємо сканер після використання
             scanner.close();
         }
     }
