@@ -1,7 +1,5 @@
-// Клас винятку, який успадковує Exception
 public class InvalidAgeException extends Exception {
-    // Конструктор для передачі повідомлення винятку
     public InvalidAgeException(String message) {
-        super(message);  // Передаємо повідомлення в батьківський клас
+        super(message); 
     }
 }
